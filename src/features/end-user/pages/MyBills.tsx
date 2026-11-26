@@ -1,9 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { useUser } from "../../../shared/context/UserContext";
-import { getUserBills } from "../services/billservice";
 import type { Bill } from "../types/billTypes";
-
+import { getUserBills } from "../services/billService";
 export const MyBills = () => {
   const { user } = useUser();
 

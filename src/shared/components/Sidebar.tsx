@@ -28,10 +28,10 @@ export const Sidebar = () => {
 
   // Navigation links for Zone Admin
   const zoneAdminMenu: MenuItem[] = [
-    { name: "Dashboard", path: "/zone", icon: "▦" },
-    { name: "Zones", path: "/zone/zones", icon: "⌖" },
-    { name: "Meters", path: "/zone/meters", icon: "⚡" },
-    { name: "Consumption", path: "/zone/consumption", icon: "◷" },
+    { name: "Dashboard", path: "/zone-dashboard", icon: "▦" },
+   
+    { name: "Meters", path: "/zone-admin/meters", icon: "⚡" },
+    { name: "Customers", path: "/zone/customer", icon: "◷" },
     { name: "Bills", path: "/zone/bills", icon: "▤" },
     { name: "Alerts", path: "/zone/alerts", icon: "⚠" },
     { name: "Users", path: "/zone/users", icon: "♙" },

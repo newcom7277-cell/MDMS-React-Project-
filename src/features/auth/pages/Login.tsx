@@ -38,7 +38,7 @@ export const Login = () => {
 
       // 3. Redirect according to role returned by backend
       if (user.role === "zone_admin") {
-        navigate("/zone");
+        navigate("/zone-admin/meters");
       } 
      else if (user.role === "end_user") {
   navigate("/end-user/meters");

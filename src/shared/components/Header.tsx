@@ -8,7 +8,6 @@ interface HeaderProps {
 }
 
 export const Header = ({ title = "Dashboard" }: HeaderProps) => {
-
   // Get logged-in user details and setUser function
   const { user, setUser } = useUser();
 
@@ -79,10 +78,15 @@ export const Header = ({ title = "Dashboard" }: HeaderProps) => {
             </div>
           )}
 
-          {/* USER NAME AND ROLE */}
+          {/* USER NAME, ID AND ROLE */}
           <div className="hidden sm:block text-left">
             <p className="text-sm font-semibold text-slate-800">
               {user?.name || "User"}
+            </p>
+
+            {/* NEW: Show User ID beside name */}
+            <p className="text-xs text-slate-500">
+              ID: {user?.id || "N/A"}
             </p>
 
             <p className="text-xs text-slate-500">
@@ -108,6 +112,11 @@ export const Header = ({ title = "Dashboard" }: HeaderProps) => {
 
               <p className="text-sm text-slate-500 break-all mt-1">
                 {user?.email}
+              </p>
+
+              {/* NEW: Show User ID in dropdown */}
+              <p className="text-sm text-slate-500 mt-1">
+                User ID: {user?.id || "N/A"}
               </p>
 
               <p className="text-xs text-blue-700 font-medium mt-2">

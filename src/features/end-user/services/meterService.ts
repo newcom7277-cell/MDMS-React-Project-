@@ -13,6 +13,6 @@ export const getUserMeters = async (
       zoneId: zoneId,
     },
   });
-
+   console.log("Full URL:", http.getUri({ url: "/Meters", ...response }));
   return response.data;
 };
